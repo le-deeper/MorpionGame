@@ -5,18 +5,18 @@ Programme de Morpion basé sur les probabilités et sur l'apprentissage
 
 Le jeu s'affiche sous une forme de grille:
 
-   a1 |  b1 |  c1
+`  a1 |  b1 |  c1
 ------------------
    a2 |  b2 |  c2
 ------------------
-   a3 |  b3 |  c3
+   a3 |  b3 |  c3 `
 
 Pour choisir un emplacement entre les coordonnées de cet emplacement.
 
 Ce programme choisit le meilleur coup en calculant la 'probabilité' de chaque chemins et donc en créant une probabilité pour chaque base (moyenne des 'probabilités' des chemins de cette base). À chaque coup, il affiche la probabilité des différents coups
 
 Pour calculer la 'probabilité', une fonction par défaut est utilisé:
-i + 1 / n
+`i + 1 / n`
 
 i: status du chemin (victoire -> 1, défaite -> -1 et nul -> 0)
 n: nombre de coups qui compose ce chemin
@@ -25,11 +25,11 @@ Cette fonction crée une probabilité définit sur [-2;2] peut bien sûr être m
 
 Comme le programme est basé sur des probabilités, on retrouve des dilemmes logiques comme par exemple:
 
-      |     |  x
+`     |     |  x
 ------------------
-      |  x  |
+     |  x  |      
 ------------------
-   o  |  x  |  o
+  o  |  x  |  o   `
 
 Dans cette exemple, pour nous, si on jouait o, le prochain coup est évident (b1). Pourtant si on réfléchit, il s'agit d'un dilemme évident.
 On peut choisir la sécurité et placer o dans l'emplacement b1 mais si on le fait, on ne peut plus gagner (le jeu finira sur un nul à coup sûr).
@@ -38,8 +38,8 @@ En revanche, on peut prendre le risque et choisir de placer o dans a2. Si l'adve
 Pour changer ce comportement, taper "problem:". Le robot va enregistrer le jeu (les emplacements de x, le nombre d'emplacements vides...) et va choisir le 2e meilleur coup (en général c'est celui-là que l'on veut) lorsque vous effectuez les mêmes choix dans une autre partie: Il apprend!
 
 Cependant, si vous voulez un choix spécifique, vous pouvez bien sûr le spécifier:
-"problem: name = Dilemme X ; solutions = b1,c2"
-les solutions peuvent être des emplacements et dans ce cas doivent être listées ou un nombre désignant n meilleur coup (le programme choisira n meilleur coup la prochaine fois)
+`problem: name = Dilemme X ; solutions = b1,c2`
+les solutions peuvent être des emplacements et dans ce cas doivent être listées ou un nombre désignant n meilleur coup (le programme choisira n meilleur coup la prochaine fois).
 
 les paramètres (falcultatifs) de "problem" sont:
 name: nom du problème

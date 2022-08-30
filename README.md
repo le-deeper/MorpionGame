@@ -5,11 +5,12 @@ Programme de Morpion basé sur les probabilités et sur l'apprentissage
 
 Le jeu s'affiche sous une forme de grille:
 
-`  a1 |  b1 |  c1
-------------------
-   a2 |  b2 |  c2
-------------------
-   a3 |  b3 |  c3 `
+
+|  a  |  b  |  c  |
+|-----|:---:|----:|
+|  a1 |  b1 |  c1  |
+|  a2 |  b2 |  c2 |
+|  a3 |  b3 |  c3 |
 
 Pour choisir un emplacement entre les coordonnées de cet emplacement.
 
@@ -25,11 +26,10 @@ Cette fonction crée une probabilité définit sur [-2;2] peut bien sûr être m
 
 Comme le programme est basé sur des probabilités, on retrouve des dilemmes logiques comme par exemple:
 
-`     |     |  x
-------------------
-     |  x  |      
-------------------
-  o  |  x  |  o   `
+|     |     |  x  |
+|-----|:---:|----:|
+|     |  x  |     |
+|  o  |  x  |  o  |
 
 Dans cette exemple, pour nous, si on jouait o, le prochain coup est évident (b1). Pourtant si on réfléchit, il s'agit d'un dilemme évident.
 On peut choisir la sécurité et placer o dans l'emplacement b1 mais si on le fait, on ne peut plus gagner (le jeu finira sur un nul à coup sûr).
